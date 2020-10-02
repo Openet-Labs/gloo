@@ -98,3 +98,8 @@ spec:
 {{- end }}
 
 {{- end }}
+
+{{- with .Values.settings.consul }}
+  consul:
+{{ toYaml . | indent 4 }}
+{{- end }}
